@@ -2,7 +2,7 @@
 
 OBXD interface for the MOD platform
 
-![image](https://user-images.githubusercontent.com/1137715/177409980-05437abb-d23e-4e08-8517-ad42b218c11f.png)
+![image](https://user-images.githubusercontent.com/1137715/177414422-8c5a598d-cdf5-4b74-89dd-0581eb710d81.png)
 
 
 
