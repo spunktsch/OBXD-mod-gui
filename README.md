@@ -6,4 +6,4 @@ OBXD interface for the MOD platform
 
 
 TODO:
-  -todo list
+  - [ ] todo list
