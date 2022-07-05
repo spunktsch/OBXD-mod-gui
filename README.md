@@ -2,8 +2,10 @@
 
 OBXD interface for the MOD platform
 
-![image](https://user-images.githubusercontent.com/1137715/176910563-c76abaf4-83c7-4a4b-8449-d538415c1832.png)
+![image](https://user-images.githubusercontent.com/1137715/177405918-f9a4a9c7-f928-43b1-b3b9-7e69aadd1b30.png)
 
 
 TODO:
-  - [ ] #1
+  - [ ] branding
+  - [ ] shadows and gradients
+  - [ ] finetuning knob positions
