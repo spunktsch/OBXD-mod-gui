@@ -7,5 +7,6 @@ OBXD interface for the MOD platform
 
 TODO:
   - [ ] branding
+  - [ ] fonts
   - [ ] shadows and gradients
   - [ ] finetuning knob positions
