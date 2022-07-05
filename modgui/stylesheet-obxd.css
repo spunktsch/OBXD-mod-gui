@@ -27,9 +27,8 @@
   background-repeat: no-repeats;
   /* background-size: contain; */
   color: white;
-  width: 1150px;
+  width: 1250px;
   height: 600px;
-  font-weight: 600;
   padding: 20px 15px;
   /* background-color: #ffffff; */
   /* Two of the same svg in a list */
@@ -130,7 +129,7 @@
 
 .obxd{{{cns}}} .mod-knob-title {
   font-family: "nulshock", sans-serif !important;
-  font-size: 12px;
+  font-size: 11px;
   padding: 8px 0px 0px 0px;
   color: rgb(215, 215, 200);
 }
@@ -161,9 +160,9 @@
 }
 
 .obxd-name h1 {
-  font-size: 40px;
-  padding: 20px 10px;
-  font-weight: 600;
+  font-size: 60px;
+  /* padding: 20px 10px;
+  font-weight: 600; */
   margin: auto auto;
   color: rgb(
     31,
@@ -237,7 +236,7 @@ grid-area: grip;
 .one {
   display: grid;
   gap: var(--gap-15);
-  grid-template-rows: 3fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr 3fr;
   grid-template-areas:
     "brand"
     "master"
@@ -249,13 +248,18 @@ grid-area: grip;
 .brand {
   display: grid;
   gap: var(--gap-15);
-  cursor: move;
   align-self: center;
   grid-template-areas:
     "header"
     "bypass";
   grid-area: brand;
+  padding: var(--padding-sections);
 }
+
+.brand img {
+  width: 200px;
+  
+  }
 
 .master {
   display: grid;
@@ -273,7 +277,7 @@ grid-area: grip;
   display: grid;
   gap: var(--gap-15);
   grid-template-rows: min-content;
-  align-items: start;
+  align-self: start;
   grid-template-areas:
     "header header header"
     "spread unison glide";
