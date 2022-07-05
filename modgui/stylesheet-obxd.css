@@ -1,46 +1,43 @@
 @font-face {
-  font-family: "TeXGyreAdventor";
-  src: url(/resources/fonts/texgyreadventor-regular.otf{{{ns}}});
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Exo2";
-  src: url(/resources/fonts/Exo2-Bold.ttf{{{ns}}});
-  font-weight: bold;
-  font-style: bold;
+  font-family: "nulshock";
+  src: url(/resources/fonts/nulshock.ttf);
+  /* font-weight: bold; */
+  /* font-style: normal; */
 }
 
 :root {
-  /* --main-bg-color: brown; */
+  --main-bg-color: brown;
   --gap-15: 15px 0;
-  --gap-8: 8px 8px;
-}
-/*  */
-/* #pedalboard-dashboard > .mod-pedal > div:first-child:not(.mod-no-shadow) {
-  box-shadow: 0px 1px 2px 0px rgba(101, 0, 41, 0.7),
-    1px 2px 4px 0px rgba(101, 0, 41, 0.7), 2px 4px 8px 0px rgba(101, 0, 41, 0.7),
-    2px 4px 16px 0px rgba(101, 0, 41, 0.7);
-} */
-
-.small-knob {
-  fill: #83aedf;
+  --gap-8: 8px 0px;
+  --padding-sections: 0 10px;
+  --btn-text-size: 12px;
+  --shadow-default: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25))
+    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2))
+    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
+    drop-shadow(0 8px 8px rgba(0, 0, 0, 0.1))
+    drop-shadow(0 16px 16px rgba(0, 0, 0, 0.05));
 }
 /* main pedal */
 
-.obxd{{{cns}}} {
+.obxd{{{cns}}}{
   background: #303030 no-repeat center;
-  background: linear-gradient(140deg, rgb(31, 31, 31) 0%, rgb(14, 18, 24) 90%);
-  border-radius: 24px;
-  /* background-image: url("https://github.com/reales/OB-Xd/blob/master/Documents/discoDSP/OB-Xd/Themes/Ilkka%20Rosma%20Dark/main.png?raw=true"); */
+  background-color: linear-gradient(140deg, rgb(31, 31, 31) 0%, rgb(14, 18, 24) 90%);
+  border-radius: 5px;
+  /* background-image: url("background.png"); */
+  background-repeat: no-repeats;
+  /* background-size: contain; */
   color: white;
-  width: 1300px;
-  height: 685px;
-  font-size: 14px;
+  width: 1150px;
+  height: 600px;
   font-weight: 600;
-  font-family: "Exo2", sans-serif !important;
-  /* padding: 20px; */
+  padding: 20px 15px;
+  /* background-color: #ffffff; */
+  /* Two of the same svg in a list */
+  background-image: url("/resources/knobs/wood-handle.svg{{{ns}}}"), url("/resources/knobs/wood-handle.svg{{{ns}}}");
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+  background-repeat: repeat-y;
+  /* The first svg goes on the left and the second svg goes on the right */
+  background-position: left, right;
 }
 
 .obxd{{{cns}}} .mod-control-group {
@@ -54,276 +51,280 @@
   background-repeat: no-repeat;
   align-content: center;
   text-transform: uppercase;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25))
-    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2))
-    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
-    drop-shadow(0 8px 8px rgba(0, 0, 0, 0.1))
-    drop-shadow(0 16px 16px rgba(0, 0, 0, 0.05));
+  filter: var(--shadow-default);
+  font-size: var(--btn-text-size);
 }
 
 .obxd{{{cns}}} .mod-control-group .mod-knob-image {
   /* padding: 8px; */
   /* background-image: url(/resources/knobs/knob_flat_sprite.png{{{ns}}}); */
-  /* background-image: url(knobs/knob_flat_dark.svg); */
   background-image: url(/resources/knobs/knob_flat_dark.svg{{{ns}}});
+  /* background-image: url(/resources/knobs/knob_flat_dark.svg{{{ns}}}); */
   background-repeat: no-repeat;
   /* background-size: auto 50px; */
   background-position: center center;
   background-size: cover;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin: 0 auto;
 }
 
 .obxd{{{cns}}} .mod-control-group .mod-button {
   /* padding: 16px 8px 0px 8px; */
-  /* background-image: url(rw_knob_bg.svg); */
   background: none;
   margin: 0;
   background-repeat: no-repeat;
   align-content: center;
   text-transform: uppercase;
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25))
-    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2))
-    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15))
-    drop-shadow(0 8px 8px rgba(0, 0, 0, 0.1))
-    drop-shadow(0 16px 16px rgba(0, 0, 0, 0.05));
+  filter: var(--shadow-default);
+  font-size: var(--btn-text-size);
 }
 
 .obxd{{{cns}}} .mod-control-group .mod-button-image {
   /* padding: 8px; */
-  /* background-image: url(knobs/button_flat_dark.svg); */
   background-image: url(/resources/knobs/button_flat_dark.svg{{{ns}}});
   background-repeat: no-repeat;
-  background-size: auto 50px;
   background-position: center;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin: 0 auto;
 }
 
-.obxd{{{cns}}} .mod-control-group .mod-button-image.on {
+.obxd{{{cns}}} .mod-control-group .mod.mod-button-small .mod-button-image {
   background-image: url(/resources/knobs/button_flat_dark.svg{{{ns}}});
-  /* background-image: url(knobs/button_flat_dark.svg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.obxd{{{cns}}} .mod-control-group .mod-button-small .mod-button-image {
+  /* padding: 8px; */
+  background-image: url(/resources/knobs/button_flat_dark.svg{{{ns}}});
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  height: 40px;
+  width: 100px;
+  margin: 0 auto;
 }
 
 .obxd{{{cns}}} .mod-control-group .mod-button-image.off {
   background-image: url(/resources/knobs/button_flat_dark_off.svg{{{ns}}});
-  /* background-image: url(knobs/button_flat_dark_off.svg); */
 }
 
 .obxd-title h1 {
-  font-size: 20px;
+  font-family: "nulshock", sans-serif !important;
+  font-size: 18px;
   text-transform: uppercase;
   margin: 5px auto;
   color: rgb(215, 215, 200);
 }
 
-.obxd{{{cns}}}  .mod-knob-title {
+.obxd{{{cns}}} .mod-knob-title img {
+  height: 10px;
+  margin: 0px auto;
+  /* display: block; */
+}
+
+.obxd{{{cns}}} .mod-knob-title {
+  font-family: "nulshock", sans-serif !important;
+  font-size: 12px;
   padding: 8px 0px 0px 0px;
   color: rgb(215, 215, 200);
 }
 
+.mod-audio-output
+{
+  left: 30px;
+
+}
+
 /* GRID */
 .obxd-container {
-  margin: 10px auto;
+  margin: 0px 5px;
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 4fr 3fr 3fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-    "one two three four ."
-    "one two three four .";
-  /* grid-template-rows: max-content; */
-  grid-template-columns: max-content;
+    "one two three four"
+    "one two three four";
 }
 
 .obxd-name {
   grid-area: obxd-name;
   text-align: center;
   align-items: center;
+  text-transform: none;
 }
 
 .obxd-name h1 {
-  font-size: 50px;
+  font-size: 40px;
   padding: 20px 10px;
   font-weight: 600;
-  /* text-transform: uppercase; */
   margin: auto auto;
-  color: rgb(31, 31, 31); /*linear-gradient(140deg, rgb(96, 15, 65) 0%, rgb(24, 14, 18) 90%); */
-  text-shadow:
-  -1px -1px 0 rgba(215, 215, 215, 0.632),
-  1px -1px 0 rgb(197, 197, 197),
-  -1px 1px 0 rgb(142, 143, 148),
-  1px 1px 0 rgb(247, 247, 248);
+  color: rgb(
+    31,
+    31,
+    31
+  ); /*linear-gradient(140deg, rgb(96, 15, 65) 0%, rgb(24, 14, 18) 90%); */
+  text-shadow: -1px -1px 0 rgba(215, 215, 215, 0.632),
+    1px -1px 0 rgb(197, 197, 197), -1px 1px 0 rgb(142, 143, 148),
+    1px 1px 0 rgb(247, 247, 248);
 }
 
 .obxd-name h2 {
   margin: 0;
   padding: 0;
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .obxd{{{cns}}} .header {
-  padding: 0;
-  margin: 0;
   grid-area: header;
   align-content: center;
-  /* grid-template-rows: min-content; */
   border-top: 3px solid #0265d6;
   border-bottom: 1px solid #0463d0;
+}
+
+.controls-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.controls-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  /* grid-template-rows: 1fr; */
+  /* align-content: space-evenly; */
+}
+
+.controls-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows: 1fr; */
+  align-content: space-evenly;
+  align-content: center;
+}
+
+.controls-5-align {
+  display: grid;
+  grid-template-columns: 4fr 2fr 4fr;
+}
+
+.controls-2-align {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .obxd{{{cns}}} .no-lines {
   border: none;
 }
 
-.gap-15
-{
+.gap-15 {
   gap: var(--gap-15);
+}
+
+.grip{
+  display: grid;
+  grid-column: 10px;
+grid-area: grip;
 }
 
 /* ONE ************************/
 .one {
   display: grid;
   gap: var(--gap-15);
-  grid-template-rows: min-content;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 3fr 1fr 3fr;
   grid-template-areas:
-    "brand brand brand"
-    "master master master"
-    "global global global";
+    "brand"
+    "master"
+    "global";
   grid-area: one;
 }
 
 /* sections one */
 .brand {
   display: grid;
+  gap: var(--gap-15);
   cursor: move;
-  grid-auto-columns: 1fr;
   align-self: center;
   grid-template-areas:
-    "header header header"
-    "bypass bypass bypass";
+    "header"
+    "bypass";
   grid-area: brand;
-  /* padding: 1em 0; */
-  grid-template-rows: min-content;
 }
 
 .master {
   display: grid;
-  gap: var(--gap-8);
+  gap: var(--gap-15);
   grid-template-rows: min-content;
-  align-items: center;
-  justify-content: stretch;
-  grid-auto-columns: 1fr;
+  align-items: start;
   grid-template-areas:
     "header header header"
     "volume fine coarse";
   grid-area: master;
-  /* padding: 1em 0; */
+  padding: var(--padding-sections);
 }
 
 .global {
   display: grid;
   gap: var(--gap-15);
   grid-template-rows: min-content;
-  align-items: center;
-  justify-content: stretch;  
-  grid-auto-columns: 1fr;
+  align-items: start;
   grid-template-areas:
     "header header header"
     "spread unison glide";
-  grid-area: global;  
+  grid-area: global;
+  padding: var(--padding-sections);
 }
 
 /* TWO ************************/
 .two {
   display: grid;
   gap: var(--gap-15);
-  grid-template-rows: min-content;
+  /* grid-template-columns: min-content; */
   grid-template-areas:
-    "osc mixer"
     "osc mixer"
     "osc mixer"
     "control control";
   grid-area: two;
-  border-left: #3f4143 solid 1px;
+  border-left: #515253 solid 1px;
+  
 }
 
 /* sections */
 .osc {
   display: grid;
   gap: var(--gap-15);
-  grid-template-rows: max-content;
+  grid-template-rows: min-content;
   align-items: start;
-  justify-content: stretch;
-  /* grid-template-columns: max-content; */
-  grid-template-areas:
-    "header"
-    "osc-row1"
-    "osc-row2"
-    "osc-row3"
-    "osc-row4";
+  grid-template-areas: "header";
   grid-area: osc;
-
-  /* grid-template-columns: max-content; */
-}
-
-.osc-row1 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-area: osc-row1;
-}
-
-.osc-row2 {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  grid-area: osc-row2;
-}
-
-.osc-row3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-area: osc-row3;
-}
-
-.osc-row4 {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-area: osc-row4;
+  border-right: #515253 solid 1px;
+  padding: var(--padding-sections);
 }
 
 .mixer {
   display: grid;
   gap: var(--gap-15);
-  grid-template-rows: min-content;
-  align-items: start;
-  /* grid-template-columns: max-content; */
-  grid-template-areas:
-    "header"
-    "mixer";
+  grid-template-columns: min-content;
+  /* align-items: start; */
+  align-self: start;
+  grid-template-areas: "header";
   grid-area: mixer;
-  border-left: #3f4143 solid 1px;
-}
-
-.section-title {
-  border-top: 1px solid #0265d6;
-  border-bottom: 1px solid #0463d0;
+  padding: var(--padding-sections);
 }
 
 .control {
   display: grid;
   gap: var(--gap-15);
-  grid-template-rows: min-content;
-  align-self: baseline;
   align-items: start;
-  grid-template-areas:
-    "header header header header header"
-    "bend bend2 vibrato flt amp";
-  border-left: #3f4143 solid 1px;
+  grid-template-areas: "header";
   grid-area: control;
+  padding: var(--padding-sections);
 }
 
 .three {
@@ -332,35 +333,19 @@
   align-content: space-center;
   grid-template-rows: min-content;
   grid-template-areas:
-    "filter filter filter"
-    "modulation modulation modulation"
-    "modulation modulation modulation";
+    "filter"
+    "modulation ";
   grid-area: three;
-  border-left: #3f4143 solid 1px;
+  border-left: #515253 solid 1px;
 }
 
 .obxd{{{cns}}} .filter {
   display: grid;
   gap: var(--gap-15);
-  grid-template-rows: min-content;
   align-items: start;
-  grid-template-areas:
-    "header header header"
-    "filter-row1 filter-row1 filter-row1"
-    "filter-row2 filter-row2 filter-row2";
+  grid-template-areas: "header";
   grid-area: filter;
-}
-
-.filter-row1 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-area: filter-row1;
-}
-
-.filter-row2 {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  grid-area: filter-row2;
+  padding: var(--padding-sections);
 }
 
 .modulation {
@@ -368,100 +353,52 @@
   gap: var(--gap-8);
   align-items: start;
   grid-template-areas:
-    "header header header"
-    "modulation-row1 modulation-row1 modulation-row1"
-    "modulation-row2 modulation-row2 modulation-row2"
-    "modulation-row3 modulation-row3 modulation-row3"
-    "modulation-row4 modulation-row4 modulation-row4";
+    "header"
+    "controls-5-align"
+    "controls-3"
+    "controls-3"
+    "controls-3";
   grid-area: modulation;
-}
-
-.modulation-row1 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-area: modulation-row1;
-}
-
-.modulation-row2 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-area: modulation-row2;
-}
-
-.modulation-row3 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-area: modulation-row3;
-}
-
-.modulation-row4 {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-area: modulation-row4;
+  padding: var(--padding-sections);
 }
 
 .four {
   display: grid;
-  gap: var(--gap-15);
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-rows: min-content;
-  grid-template-areas:
-    "filter-env filter-env filter-env"
-    "amp-env amp-env amp-env"
-    "voice voice voice";
   grid-area: four;
-  border-left: #3f4143 solid 1px;
-}
-
-.voice {
-  display: grid;
   gap: var(--gap-15);
   grid-template-rows: min-content;
-  grid-template-columns: 1fr;
-
   grid-template-areas:
-    "header header header header"
-    "voice-row1 voice-row1 voice-row1 voice-row1"
-    "voice-row2 voice-row2 voice-row2 voice-row2"
-    "voice-row3 voice-row3 voice-row3 voice-row3";
-  grid-area: voice;
-}
-
-.voice-row1 {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-area: voice-row1;
-}
-
-.voice-row2 {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-area: voice-row2;
-}
-
-.voice-row3 {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-area: voice-row3;
+    "filter-env"
+    "amp-env "
+    "voice ";
+  border-left: #3f4143 solid 1px;
 }
 
 .filter-env {
   display: grid;
-  gap: var(--gap-15);
-  grid-template-rows: min-content;
-  grid-template-areas:
-    "header header header header"
-    "filter-env filter-env filter-env filter-env";
   grid-area: filter-env;
+  grid-template-rows: min-content;
+  gap: var(--gap-15);
+  grid-template-areas: "header";
+  padding: var(--padding-sections);
 }
 
 .amp-env {
   display: grid;
+  grid-area: amp-env;
+  gap: var(--gap-15);
+  grid-template-rows: min-content;
+  grid-template-areas: "header";
+  padding: var(--padding-sections);
+}
+
+.voice {
+  display: grid;
+  grid-area: voice;
   gap: var(--gap-15);
   grid-template-rows: min-content;
   grid-template-areas:
-    "header header header header"
-    "amp-env amp-env amp-env amp-env";
-  grid-area: amp-env;
+    "header"
+    "control-4";
+    padding: var(--padding-sections);
 }

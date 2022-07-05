@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
-<circle fill="#04102B" cx="25" cy="25" r="24.649"/>
+<circle fill="#333333" cx="25" cy="25" r="20"/>
 <g>
-	<circle fill="#333333" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" cx="25" cy="25" r="23.819"/>
-	<circle fill="#3C3C3C" cx="25" cy="25" r="16.579"/>
-	<rect class="small-knob" x="23.767" y="0.629" fill="#83aedf" width="2.465" height="11.418"/>
+	<circle fill="#333333" stroke="#000000" stroke-width="1" stroke-miterlimit="10" cx="25" cy="25.063" r="23.381"/>
+	<circle fill="#3C3C3C" cx="25" cy="25" r="18"/>
+	<rect x="22.75" fill="#546DFF" width="3" height="25"/>
 </g>
 </svg>
